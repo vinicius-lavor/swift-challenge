@@ -36,10 +36,14 @@ func iniciaTerminal(){
     var teaList = [teaGoodFeelings, teaCamomila, teaBoldo, teaHortela]
     
     var teaListNausea = teaList.filter{$0.cure == "Enjoo"}
-        
-    /*for i in 0...2{
+    
+    var teaListNauseaSize = teaListNausea.count
+    
+//    print(teaListNauseaSize)
+    
+    for i in 0...teaListNauseaSize - 1{
         print(teaListNausea[i].toString())
-    }*/
+    }
 
    // print(tea.boasVindas())
     
