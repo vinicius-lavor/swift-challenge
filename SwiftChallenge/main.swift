@@ -1,0 +1,4 @@
+
+//howToGetAInput()
+//learningArrays()
+iniciaTerminal()
