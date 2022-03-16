@@ -29,7 +29,6 @@ func iniciaTerminal(){
     let teaBoldo = Tea.init(name: "Boldo", type: "Infusão de Ervas", cure: "Enjoo")
     let teaHortela = Tea.init(name: "Hortela", type: "Infusão de Ervas", cure: "Enjoo")
     
-    
     //print(teaGoodFeelings.toString())
     //print(teaCamomila.toString())
     
