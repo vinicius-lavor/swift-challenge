@@ -50,13 +50,43 @@ func iniciaTerminal(){
                             description: "Lorem Ipsum 1",
                             instruction: "Use 3 colheres de sopa de ",
                             sensation: "Focar",
-                            cure: "Cólica",
+                            cure: "Colica",
                             contraindication: "gestantes")
-    let camomilaTea = Tea.init(name: "Camomila", type: "Infusão de Ervas", description: "Lorem Ipsum 2", instruction: "Use 3 colheres de sopa de ", sensation: "Relaxar", cure: "Enjoo", contraindication: "Teste2")
-    let boldoTea = Tea.init(name: "Boldo", type: "Infusão de Ervas", description: "Lorem Ipsum 3", instruction: "Use 3 colheres de sopa de ", sensation: "Teste1", cure: "Enjoo", contraindication: "Teste3")
-    let hortelaTea = Tea.init(name: "Hortela", type: "Infusão de Ervas", description: "Lorem Ipsum 4", instruction: "Use 3 colheres de sopa de ", sensation: "Teste1", cure: "Enjoo", contraindication: "Teste4")
-    let hibiscoTea = Tea.init(name: "Hibisco", type: "Infusão de Ervas", description: "Lorem Ipsum 5", instruction: "Ingredientes:\nUse 3 colheres de sopa de \n\nModo de preparo:\n", sensation: "Teste1", cure: "Pressão Alta", contraindication: "Teste5")
-    let ervacidreiraTea = Tea.init(name: "Erva-cidreira",type: "Infusão de Ervas", description: "Possui muitos nutrientes para o corpo, como a vitamina A, B, C e minerais como cobre, zinco, ferro, potássio, cálcio, magnésio e fósforo. A erva-cidreira possui efeito calmante e sedativo, auxiliando na redução de problemas de insônia, ansiedade e estresse, o que também melhor o humor de acordo com pesquisas.", instruction: "\nIngredientes:\n4 xícaras de água fervente\n4 colheres de sopa de folhas de erva-cidreira\n\nModo de preparo:\nAdicionar as folhas de erva-cidreira na água fervente, tampar e deixar repousar por alguns minutos. A seguir, coar e beber de 3 a 4 xícaras deste chá por dia.", sensation: "Relaxar", cure: "Indigestao", contraindication: "pessoas que estão tomando remédios para dormir.")
+    let camomilaTea = Tea.init(name: "Camomila",
+                               type: "Infusão de Ervas",
+                               description: "Lorem Ipsum 2",
+                               instruction: "Use 3 colheres de sopa de ",
+                               sensation: "Relaxar",
+                               cure: "Enjoo",
+                               contraindication: "Teste2")
+    let boldoTea = Tea.init(name: "Boldo",
+                            type: "Infusão de Ervas",
+                            description: "Lorem Ipsum 3",
+                            instruction: "Use 3 colheres de sopa de ",
+                            sensation: "Teste1",
+                            cure: "Enjoo",
+                            contraindication: "Teste3")
+    let hortelaTea = Tea.init(name: "Hortela",
+                              type: "Infusão de Ervas",
+                              description: "Lorem Ipsum 4",
+                              instruction: "Use 3 colheres de sopa de ",
+                              sensation: "Teste1",
+                              cure: "Dor de cabeça",
+                              contraindication: "Teste4")
+    let hibiscoTea = Tea.init(name: "Hibisco",
+                              type: "Infusão de Ervas",
+                              description: "Lorem Ipsum 5",
+                              instruction: "Ingredientes:\nUse 3 colheres de sopa de \n\nModo de preparo:\n",
+                              sensation: "Teste1",
+                              cure: "Pressão alta",
+                              contraindication: "Teste5")
+    let ervacidreiraTea = Tea.init(name: "Erva-cidreira",
+                                   type: "Infusão de Ervas",
+                                   description: "Possui muitos nutrientes para o corpo, como a vitamina A, B, C e minerais como cobre, zinco, ferro, potássio, cálcio, magnésio e fósforo. A erva-cidreira possui efeito calmante e sedativo, auxiliando na redução de problemas de insônia, ansiedade e estresse, o que também melhor o humor de acordo com pesquisas.",
+                                   instruction: "\nIngredientes:\n4 xícaras de água fervente\n4 colheres de sopa de folhas de erva-cidreira\n\nModo de preparo:\nAdicionar as folhas de erva-cidreira na água fervente, tampar e deixar repousar por alguns minutos. A seguir, coar e beber de 3 a 4 xícaras deste chá por dia.",
+                                   sensation: "Relaxar",
+                                   cure: "Indigestao",
+                                   contraindication: "pessoas que estão tomando remédios para dormir.")
 
     let teaList = [greenTea, camomilaTea, boldoTea, hortelaTea, hibiscoTea, ervacidreiraTea]
     
@@ -89,6 +119,90 @@ func iniciaTerminal(){
 //    }
     let randomTeaList = teaList.randomElement()!
     
+    func switchCureOption(){
+        print(
+            """
+            
+            O que você está sentindo?
+            1 - Enjôo
+            2 - Indigestão
+            3 - Cólica
+            4 - Dor de cabeça
+            5 - Indisposição
+            """
+        )
+        var cureOption = readLine()
+        switch cureOption {
+        case "1":
+            print("\nO(s) chá(s) que recomendamos para você:\n ")
+            cureOption = "Enjoo"
+            filterCure(cureOption!)
+        case "2":
+            print("\nO(s) chá(s) que recomendamos para você:\n ")
+            cureOption = "Indigestao"
+            filterCure(cureOption!)
+        case "3":
+            print("\nO(s) chá(s) que recomendamos para você:\n ")
+            cureOption = "Colica"
+            filterCure(cureOption!)
+        case "4":
+            print("\nO(s) chá(s) que recomendamos para você:\n ")
+            cureOption = "Dor de cabeça"
+            filterCure(cureOption!)
+        default:
+            print("\nValor inválido. Digite novamente...")
+            switchCureOption()
+        }
+    }
+    
+    func switchSensationOption(){
+        print(
+        """
+        O que você quer fazer?
+        
+        1 - Relaxar
+        2 - Focar
+        """
+        )
+        var sensationOption = readLine()
+        
+        switch sensationOption {
+        case "1":
+            print("\nO(s) chá(s) que recomendamos para você:\n ")
+            sensationOption = "Relaxar"
+            filterSensation(sensationOption!)
+            break
+        case "2":
+            print("\nO(s) chá(s) que recomendamos para você:\n ")
+            sensationOption = "Focar"
+            filterSensation(sensationOption!)
+            break
+        default:
+            print("\nValor inválido. Digite novamente...")
+            switchSensationOption()
+        }
+    }
+    
+    func switchFeelingsOption(){
+        print(
+            """
+            Você está se sentindo bem?
+            1 - Sim
+            2 - Não
+            """
+        )
+        let feelingsOption = readLine()
+        switch feelingsOption {
+        case "1":
+            switchSensationOption()
+        case "2":
+            switchCureOption()
+        default:
+            print("\nValor inválido. Digite novamente...")
+            switchFeelingsOption()
+        }
+    }
+    
     print(
             """
             Bem-vinda(o)!! Essa aplicação tem como funcionalidade ajudar o usuário na hora de escolher um chá que ele quer ou precisa tomar.
@@ -113,77 +227,11 @@ func iniciaTerminal(){
             )
         break
     case "2":
-        print(
-            """
-            Você está se sentindo bem?
-            1 - Sim
-            2 - Não
-            """
-        )
-        let feelingsOption = readLine()
-        switch feelingsOption {
-        case "1":
-            print(
-            """
-            O que você quer fazer?
-            
-            1 - Relaxar
-            2 - Focar
-            3 - Relaxar
-            4 - Relaxar
-            5 - Relaxar
-            6 - Relaxar
-            """
-            )
-            var sensationOption = readLine()
-            
-            switch sensationOption {
-            case "1":
-                print("\nOs chás que recomendamos para você:\n ")
-                sensationOption = "Relaxar"
-                filterSensation(sensationOption!)
-                break
-            case "2":
-                print("\nOs chás que recomendamos para você:\n ")
-                sensationOption = "Focar"
-                filterSensation(sensationOption!)
-                break
-            default:
-                print("\nValor inválido")
-            }
-        case "2":
-            print(
-                """
-                
-                O que você está sentindo?
-                1 - Enjôo
-                2 - Indigestão
-                3 - Cólica
-                """
-            )
-            var cureOption = readLine()
-            switch cureOption {
-            case "1":
-                print("\nOs chás que recomendamos para você:\n ")
-                cureOption = "Enjoo"
-                filterCure(cureOption!)
-            case "2":
-                print("\nOs chás que recomendamos para você:\n ")
-                cureOption = "Indigestao"
-                filterCure(cureOption!)
-            case "3":
-                print("\nOs chás que recomendamos para você:\n ")
-                cureOption = "Indigestao"
-                filterCure(cureOption!)
-            default:
-                print("\nValor inválido")
-            }
-        default:
-            print("\nValor inválido")
-        }
-        break
+        switchFeelingsOption()
     default:
-        print("\nValor inválido")
+        print("\nValor inválido. Digite novamente...")
+        return iniciaTerminal()
     }
 }
+
 
