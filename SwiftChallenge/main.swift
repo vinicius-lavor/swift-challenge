@@ -1,4 +1,7 @@
+//tea
+iniciaTerminal()
 
+//aprendendo
 //howToGetAInput()
 //learningArrays()
-iniciaTerminal()
+

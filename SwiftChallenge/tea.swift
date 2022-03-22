@@ -29,17 +29,12 @@ func iniciaTerminal(){
         
         public func toString() -> String{
             return """
-            
-            Nome: Chá de \(self.name)
+            ======== Chá de \(self.name) ========
             
             Tipo: \(self.type)
-            
             Descrição: \(self.description)
-            
-            Contraindicação: Esse chá é contraindicado para \(self.contraindication)
-            
+            Contraindicação: \(self.contraindication)
             \(self.instruction)
-            
             
             """
         }
@@ -47,46 +42,46 @@ func iniciaTerminal(){
     
     let greenTea = Tea.init(name: "Verde",
                             type: "Camellia sinensis",
-                            description: "Lorem Ipsum 1",
-                            instruction: "Use 3 colheres de sopa de ",
+                            description: " ",
+                            instruction: "Ingredientes:\nUse 3 colheres de sopa de \n\nModo de preparo:\n",
                             sensation: "Focar",
                             cure: "Colica",
                             contraindication: "gestantes")
     let camomilaTea = Tea.init(name: "Camomila",
                                type: "Infusão de Ervas",
-                               description: "Lorem Ipsum 2",
-                               instruction: "Use 3 colheres de sopa de ",
+                               description: " ",
+                               instruction: "Ingredientes:\nUse 3 colheres de sopa de \n\nModo de preparo:\n",
                                sensation: "Relaxar",
                                cure: "Enjoo",
                                contraindication: "Teste2")
     let boldoTea = Tea.init(name: "Boldo",
                             type: "Infusão de Ervas",
-                            description: "Lorem Ipsum 3",
-                            instruction: "Use 3 colheres de sopa de ",
+                            description: " ",
+                            instruction: "Ingredientes:\nUse 3 colheres de sopa de \n\nModo de preparo:\n",
                             sensation: "Teste1",
-                            cure: "Enjoo",
+                            cure: "Indigestao",
                             contraindication: "Teste3")
     let hortelaTea = Tea.init(name: "Hortela",
                               type: "Infusão de Ervas",
-                              description: "Lorem Ipsum 4",
-                              instruction: "Use 3 colheres de sopa de ",
+                              description: " ",
+                              instruction: "Ingredientes:\nUse 3 colheres de sopa de \n\nModo de preparo:\n",
                               sensation: "Teste1",
                               cure: "Dor de cabeça",
-                              contraindication: "Teste4")
+                              contraindication: "A hortelã é contraindicada para gestantes, lactantes, pacientes com obstrução dos ductos biliares, pessoas com anemia, crianças menores de dois anos e pessoas com hipersensibilidade ao óleo essencial.")
     let hibiscoTea = Tea.init(name: "Hibisco",
                               type: "Infusão de Ervas",
                               description: "Lorem Ipsum 5",
                               instruction: "Ingredientes:\nUse 3 colheres de sopa de \n\nModo de preparo:\n",
-                              sensation: "Teste1",
+                              sensation: "Refrescar",
                               cure: "Pressão alta",
-                              contraindication: "Teste5")
+                              contraindication: "O hibisco é contraindicado para pessoas que estão com TPM, querendo engravidar ou grávidas.")
     let ervacidreiraTea = Tea.init(name: "Erva-cidreira",
                                    type: "Infusão de Ervas",
                                    description: "Possui muitos nutrientes para o corpo, como a vitamina A, B, C e minerais como cobre, zinco, ferro, potássio, cálcio, magnésio e fósforo. A erva-cidreira possui efeito calmante e sedativo, auxiliando na redução de problemas de insônia, ansiedade e estresse, o que também melhor o humor de acordo com pesquisas.",
                                    instruction: "\nIngredientes:\n4 xícaras de água fervente\n4 colheres de sopa de folhas de erva-cidreira\n\nModo de preparo:\nAdicionar as folhas de erva-cidreira na água fervente, tampar e deixar repousar por alguns minutos. A seguir, coar e beber de 3 a 4 xícaras deste chá por dia.",
                                    sensation: "Relaxar",
                                    cure: "Indigestao",
-                                   contraindication: "pessoas que estão tomando remédios para dormir.")
+                                   contraindication: "A erva-cidreira é contraindicada para pessoas que estão tomando medicamentos para dormir.")
 
     let teaList = [greenTea, camomilaTea, boldoTea, hortelaTea, hibiscoTea, ervacidreiraTea]
     
@@ -162,6 +157,7 @@ func iniciaTerminal(){
         
         1 - Relaxar
         2 - Focar
+        3 - Se refrescar
         """
         )
         var sensationOption = readLine()
@@ -175,6 +171,11 @@ func iniciaTerminal(){
         case "2":
             print("\nO(s) chá(s) que recomendamos para você:\n ")
             sensationOption = "Focar"
+            filterSensation(sensationOption!)
+            break
+        case "3":
+            print("\nO(s) chá(s) que recomendamos para você:\n ")
+            sensationOption = "Refrescar"
             filterSensation(sensationOption!)
             break
         default:
@@ -205,6 +206,7 @@ func iniciaTerminal(){
     
     print(
             """
+            
             Bem-vinda(o)!! Essa aplicação tem como funcionalidade ajudar o usuário na hora de escolher um chá que ele quer ou precisa tomar.
             
             Escolha uma das opções abaixo:
