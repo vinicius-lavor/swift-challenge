@@ -40,6 +40,7 @@ func learningArrays(){
     //Adicionar elementos
     userNames.append("novo registro")
     
+    print(userNames[0...3])
     //Remover todos os elementos
     userNames.removeAll()
     

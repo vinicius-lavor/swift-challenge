@@ -29,7 +29,7 @@ func iniciaTerminal(){
         
         public func toString() -> String{
             return """
-            ======== Chá de \(self.name) ========
+            ======== \(self.name) ========
             
             Tipo: \(self.type)
             Descrição: \(self.description)
@@ -40,42 +40,49 @@ func iniciaTerminal(){
         }
     }
     
-    let greenTea = Tea.init(name: "Verde",
+    let greenTea = Tea.init(name: "Chá Verde",
                             type: "Camellia sinensis",
-                            description: " ",
-                            instruction: "Ingredientes:\nUse 3 colheres de sopa de \n\nModo de preparo:\n",
+                            description: "A bebida é repleta de propriedades nutricionais que ajudam a prevenir doenças e deixam o organismo mais fortalecido. A planta possui grande quantidade de antioxidantes, cafeína, aminoácidos, vitaminas B, E, C, cálcio, magnésio, zinco, potássio e ferro que proporcionam mais saúde.",
+                            instruction: "Ingredientes:\n200 ml de água\nUma colher de sopa (2g) de folhinhas de chá verde \n\nModo de preparo:\nColoque 200 ml de água em uma chaleira no fogo baixo e desligue antes de começar a ferver, assim que subirem as primeiras bolhinhas\nJogue a água quente sobre a quantidade de 1 colher de sopa da erva (2g) em uma xícara\nCubra deixando em infusão por 3 minutos\nCoe e beba.",
                             sensation: "Focar",
-                            cure: "Colica",
-                            contraindication: "gestantes")
-    let camomilaTea = Tea.init(name: "Camomila",
+                            cure: "Indisposiçao",
+                            contraindication: "O consumo excessivo de chá verde pode trazer efeitos colaterais como insônia e dores de cabeça. Lembrando que gestantes, idosos, pessoas com problemas cardíacos e com tendência à insônia devem ter um cuidado ainda maior no momento de inserir o chá verde na sua rotina.")
+    let canelaTea = Tea.init(name: "Chá de Canela",
+                               type: "Infusão de Especiarias",
+                               description: "A canela, além de anti-inflamatória, é um antiespasmódico natural. Auxilia na diminuição das contrações e também da náusea, outro sintoma comum no período menstrual.",
+                               instruction: "Ingredientes:\n1 Canela em pau\n250ml de água\n\nModo de preparo:\nAdicione a canela em pau em uma chaleira ou panela com a água e ferver por 10 a 15 minutos.",
+                               sensation: "Relaxar",
+                               cure: "Colica",
+                               contraindication: "A canela não deve ser consumida por mulheres que estejam grávidas ou amamentando, Essa especiaria também é contraindicada para pessoas com úlceras ou que possuem doenças graves do fígado.")
+    let camomilaTea = Tea.init(name: "Chá de Camomila",
                                type: "Infusão de Ervas",
-                               description: " ",
-                               instruction: "Ingredientes:\nUse 3 colheres de sopa de \n\nModo de preparo:\n",
+                               description: "Entre as propriedades do chá, estão os compostos fenólicos e ácidos orgânicos, ácidos fenólicos, flavonoides, polifenóis e óleos essenciais. São eles os responsáveis por conferir os efeitos terapêuticos, em especial, de atividade antioxidante e anti-inflamatória.",
+                               instruction: "Ingredientes:\n2 colheres de chá de flores secas de camomila\n250ml de água\n\nModo de preparo:\nAdicionar as flores de camomila na água fervente, tampar e deixar repousar por 10 minutos. A seguir, coar e beber de 3 a 4 xícaras deste chá por dia.",
                                sensation: "Relaxar",
                                cure: "Enjoo",
-                               contraindication: "Teste2")
-    let boldoTea = Tea.init(name: "Boldo",
+                               contraindication: "Não é indicado o uso do chá de camomila durante o processo gestacional, especialmente no primeiro trimestre, podendo ocorrer desde abortos espontâneos e malformações congênitas.")
+    let boldoTea = Tea.init(name: "Chá de Boldo",
                             type: "Infusão de Ervas",
-                            description: " ",
-                            instruction: "Ingredientes:\nUse 3 colheres de sopa de \n\nModo de preparo:\n",
-                            sensation: "Teste1",
+                            description: "O boldo é uma planta medicinal muito usada como remédio caseiro, especialmente para o fígado devido às suas propriedades digestivas e hepáticas. Além disso, também possui propriedades diuréticas, anti-inflamatórias e antioxidantes, que podem ajudar no tratamento e prevenção de outros problemas, como gastrite, aterosclerose e câncer.",
+                            instruction: "Ingredientes:\n2 colheres de chá de folhas de boldo\n250ml de água\n\nModo de preparo:\nAdicionar o boldo na água fervente, tampar e deixar repousar de 5 a 10 minutos. A seguir, coar e beber.",
+                            sensation: "Leve",
                             cure: "Indigestao",
-                            contraindication: "Teste3")
-    let hortelaTea = Tea.init(name: "Hortela",
+                            contraindication: "O boldo não é recomendado para crianças, pessoas com pedra na vesícula e inflamação das vias biliares, doenças no fígado, nos rins, câncer na vesícula ou no pâncreas. Este tipo de boldo também é contraindicado para mulheres que amamentam e para gestantes, especialmente nos primeiros três meses de gestação.")
+    let hortelaTea = Tea.init(name: "Chá de Hortelã",
                               type: "Infusão de Ervas",
-                              description: " ",
-                              instruction: "Ingredientes:\nUse 3 colheres de sopa de \n\nModo de preparo:\n",
-                              sensation: "Teste1",
+                              description: "O chá de hortelã pode ser usado para fins medicinais, porque possui propriedades antioxidantes, analgésicas, digestivas, descongestionantes, anti-inflamatórias e antiespasmódicas, sendo uma ótima opção para melhorar a digestão e o cansaço, e aliviar as cólicas e a dor de cabeça, por exemplo.",
+                              instruction: "Ingredientes:\n1 colher de sopa de folhas de hortelã\n150ml de água\n\nModo de preparo:\nAdicionar as folhas de hortelã na água fervente, tampar e deixar repousar de 10 a 15 minutos. A seguir, coar e beber.",
+                              sensation: "Refrescar",
                               cure: "Dor de cabeça",
                               contraindication: "A hortelã é contraindicada para gestantes, lactantes, pacientes com obstrução dos ductos biliares, pessoas com anemia, crianças menores de dois anos e pessoas com hipersensibilidade ao óleo essencial.")
-    let hibiscoTea = Tea.init(name: "Hibisco",
+    let hibiscoTea = Tea.init(name: "Chá de Hibisco",
                               type: "Infusão de Ervas",
-                              description: "Lorem Ipsum 5",
-                              instruction: "Ingredientes:\nUse 3 colheres de sopa de \n\nModo de preparo:\n",
-                              sensation: "Refrescar",
-                              cure: "Pressão alta",
+                              description: "O hibisco é uma planta medicinal caracterizada por ser rica em antocianinas, um composto que garante a sua cor vermelha característica e que, por sua vez, proporciona grande potencial antioxidante.",
+                              instruction: "Ingredientes:\n1 colher de sopa de hibisco\n500ml de água\n\nModo de preparo:\nAdicionar o hibisco na água fervente, tampar e deixar repousar de 10 a 15 minutos. A seguir, coar e beber.",
+                              sensation: "Pressaoalta",
+                              cure: "Indigestao",
                               contraindication: "O hibisco é contraindicado para pessoas que estão com TPM, querendo engravidar ou grávidas.")
-    let ervacidreiraTea = Tea.init(name: "Erva-cidreira",
+    let ervacidreiraTea = Tea.init(name: "Chá de Erva-cidreira",
                                    type: "Infusão de Ervas",
                                    description: "Possui muitos nutrientes para o corpo, como a vitamina A, B, C e minerais como cobre, zinco, ferro, potássio, cálcio, magnésio e fósforo. A erva-cidreira possui efeito calmante e sedativo, auxiliando na redução de problemas de insônia, ansiedade e estresse, o que também melhor o humor de acordo com pesquisas.",
                                    instruction: "\nIngredientes:\n4 xícaras de água fervente\n4 colheres de sopa de folhas de erva-cidreira\n\nModo de preparo:\nAdicionar as folhas de erva-cidreira na água fervente, tampar e deixar repousar por alguns minutos. A seguir, coar e beber de 3 a 4 xícaras deste chá por dia.",
@@ -83,37 +90,36 @@ func iniciaTerminal(){
                                    cure: "Indigestao",
                                    contraindication: "A erva-cidreira é contraindicada para pessoas que estão tomando medicamentos para dormir.")
 
-    let teaList = [greenTea, camomilaTea, boldoTea, hortelaTea, hibiscoTea, ervacidreiraTea]
+    let teaList = [greenTea, canelaTea, camomilaTea, boldoTea, hortelaTea, hibiscoTea, ervacidreiraTea]
+    
+    let randomTeaList = teaList.randomElement()!
     
     func filterCure(_ string: String){
         let teaListCure = teaList.filter{$0.cure == string}
+        let teaListCureSize = teaListCure.count
+        if (teaListCureSize > 1){
+            print("\nOs chás que recomendamos para você:\n ")
+        }else {
+            print("\nO chá que recomendamos para você:\n ")
+        }
         teaListCure.forEach { tea in
             print(tea.toString())
         }
     }
     
-//    func filterCureIndigestion(){
-//        let teaListCureIndigestion = teaList.filter{$0.cure == "Indigestao"}
-//        teaListCureIndigestion.forEach { tea in
-//            print(tea.toString())
-//        }
-//    }
-    
     func filterSensation(_ string: String){
         let teaListSensation = teaList.filter{$0.sensation == string}
+        let teaListSensationSize = teaListSensation.count
+        if (teaListSensationSize > 1){
+            print("\nOs chás que recomendamos para você:\n ")
+        }else {
+            print("\nO chá que recomendamos para você:\n ")
+        }
         teaListSensation.forEach { tea in
             print(tea.toString())
         }
     }
-    
-//    func filterSensationFocus(){
-//        let teaListSensationFocus = teaList.filter{$0.sensation == "Focar"}
-//        teaListSensationFocus.forEach { tea in
-//            print(tea.toString())
-//        }
-//    }
-    let randomTeaList = teaList.randomElement()!
-    
+        
     func switchCureOption(){
         print(
             """
@@ -124,64 +130,57 @@ func iniciaTerminal(){
             3 - Cólica
             4 - Dor de cabeça
             5 - Indisposição
+            6 - Pressão Alta
             """
         )
         var cureOption = readLine()
         switch cureOption {
         case "1":
-            print("\nO(s) chá(s) que recomendamos para você:\n ")
             cureOption = "Enjoo"
-            filterCure(cureOption!)
         case "2":
-            print("\nO(s) chá(s) que recomendamos para você:\n ")
             cureOption = "Indigestao"
-            filterCure(cureOption!)
         case "3":
-            print("\nO(s) chá(s) que recomendamos para você:\n ")
             cureOption = "Colica"
-            filterCure(cureOption!)
         case "4":
-            print("\nO(s) chá(s) que recomendamos para você:\n ")
             cureOption = "Dor de cabeça"
-            filterCure(cureOption!)
+        case "5":
+            cureOption = "Indisposiçao"
+        case "6":
+            cureOption = "Pressaoalta"
         default:
             print("\nValor inválido. Digite novamente...")
             switchCureOption()
         }
+        filterCure(cureOption!)
     }
     
     func switchSensationOption(){
         print(
         """
         O que você quer fazer?
-        
         1 - Relaxar
         2 - Focar
         3 - Se refrescar
+        4 - Ficar leve
+        
         """
         )
         var sensationOption = readLine()
         
         switch sensationOption {
         case "1":
-            print("\nO(s) chá(s) que recomendamos para você:\n ")
             sensationOption = "Relaxar"
-            filterSensation(sensationOption!)
-            break
         case "2":
-            print("\nO(s) chá(s) que recomendamos para você:\n ")
             sensationOption = "Focar"
-            filterSensation(sensationOption!)
-            break
         case "3":
-            print("\nO(s) chá(s) que recomendamos para você:\n ")
             sensationOption = "Refrescar"
-            filterSensation(sensationOption!)
-            break
+        case "4":
+            sensationOption = "Leve"
         default:
             print("\nValor inválido. Digite novamente...")
             switchSensationOption()
         }
+        filterSensation(sensationOption!)
     }
     
     func switchFeelingsOption(){
@@ -190,6 +189,7 @@ func iniciaTerminal(){
             Você está se sentindo bem?
             1 - Sim
             2 - Não
+            
             """
         )
         let feelingsOption = readLine()
@@ -206,9 +206,9 @@ func iniciaTerminal(){
     
     print(
             """
-            
-            Bem-vinda(o)!! Essa aplicação tem como funcionalidade ajudar o usuário na hora de escolher um chá que ele quer ou precisa tomar.
-            
+            ============================================================================================================================================
+            || 🫖 Bem-vinda(o)!! Essa aplicação tem como funcionalidade ajudar o usuário na hora de escolher um chá que ele quer ou precisa tomar. 🍵 ||
+            ============================================================================================================================================
             Escolha uma das opções abaixo:
             
             1 - Recomendação do dia
@@ -235,5 +235,3 @@ func iniciaTerminal(){
         return iniciaTerminal()
     }
 }
-
-
