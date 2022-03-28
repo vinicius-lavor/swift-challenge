@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9875996927DF7D5B00C15157 /* aprendendo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9875996827DF7D5B00C15157 /* aprendendo.swift */; };
-		9875996B27DFB7DC00C15157 /* tea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9875996A27DFB7DC00C15157 /* tea.swift */; };
 		98F8422327D7928E00C7E4A9 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F8422227D7928E00C7E4A9 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,8 +23,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9875996827DF7D5B00C15157 /* aprendendo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aprendendo.swift; sourceTree = "<group>"; };
-		9875996A27DFB7DC00C15157 /* tea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tea.swift; sourceTree = "<group>"; };
 		98F8421F27D7928E00C7E4A9 /* SwiftChallenge */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftChallenge; sourceTree = BUILT_PRODUCTS_DIR; };
 		98F8422227D7928E00C7E4A9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,8 +58,6 @@
 			isa = PBXGroup;
 			children = (
 				98F8422227D7928E00C7E4A9 /* main.swift */,
-				9875996827DF7D5B00C15157 /* aprendendo.swift */,
-				9875996A27DFB7DC00C15157 /* tea.swift */,
 			);
 			path = SwiftChallenge;
 			sourceTree = "<group>";
@@ -127,8 +121,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				98F8422327D7928E00C7E4A9 /* main.swift in Sources */,
-				9875996927DF7D5B00C15157 /* aprendendo.swift in Sources */,
-				9875996B27DFB7DC00C15157 /* tea.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
