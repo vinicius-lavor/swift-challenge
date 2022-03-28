@@ -1,7 +1,7 @@
 
 # Tea Choices
 
-A motivação para criar essa aplicação veio a partir da necessidade de organizar qual chá seria o melhor para tomar no momento, tendo uma recomendação aleatória para experimentar novas chás, ou algo mais personalizado, baseado na saúde e no humor do usuário.
+A motivação para criar essa aplicação veio a partir da necessidade de organizar qual chá seria o melhor para tomar no momento. Ele funciona dando uma recomendação aleatória para experimentar novas chás, ou algo mais personalizado, baseado na saúde e no humor do usuário.
 ## Autores
 
 - [@vinicius-lavor](https://www.github.com/vinicius-lavor)
