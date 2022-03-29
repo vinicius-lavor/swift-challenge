@@ -59,7 +59,7 @@ func main(){
                                description: "Entre as propriedades do chá, estão os compostos fenólicos e ácidos orgânicos, ácidos fenólicos, flavonoides, polifenóis e óleos essenciais. São eles os responsáveis por conferir os efeitos terapêuticos, em especial, de atividade antioxidante e anti-inflamatória.",
                                instruction: "Ingredientes:\n2 colheres de chá de flores secas de camomila\n250ml de água\n\nModo de preparo:\nAdicionar as flores de camomila na água fervente, tampar e deixar repousar por 10 minutos. A seguir, coar e beber de 3 a 4 xícaras deste chá por dia.",
                                sensation: "Relaxar",
-                               cure: "Enjoo",
+                               cure: "Ansiedade",
                                contraindication: "Não é indicado o uso do chá de camomila durante o processo gestacional, especialmente no primeiro trimestre, podendo ocorrer desde abortos espontâneos e malformações congênitas.")
     let boldoTea = Tea.init(name: "Chá de Boldo",
                             type: "Infusão de Ervas",
@@ -79,8 +79,8 @@ func main(){
                               type: "Infusão de Ervas",
                               description: "O hibisco é uma planta medicinal caracterizada por ser rica em antocianinas, um composto que garante a sua cor vermelha característica e que, por sua vez, proporciona grande potencial antioxidante.",
                               instruction: "Ingredientes:\n1 colher de sopa de hibisco\n500ml de água\n\nModo de preparo:\nAdicionar o hibisco na água fervente, tampar e deixar repousar de 10 a 15 minutos. A seguir, coar e beber.",
-                              sensation: "Pressaoalta",
-                              cure: "Indigestao",
+                              sensation: "Refrescar",
+                              cure: "Pressaoalta",
                               contraindication: "O hibisco é contraindicado para pessoas que estão com TPM, querendo engravidar ou grávidas.")
     let ervacidreiraTea = Tea.init(name: "Chá de Erva-cidreira",
                                    type: "Infusão de Ervas",
@@ -131,6 +131,7 @@ func main(){
             4 - Dor de cabeça
             5 - Indisposição
             6 - Pressão Alta
+            7 - Ansiedade
             """
         )
         var cureOption = readLine()
@@ -193,8 +194,7 @@ func main(){
             sensationOption = "Focar"
         case "3":
             sensationOption = "Refrescar"
-        case "4":
-            sensationOption = "Leve"
+
         default:
             print("\nValor inválido. Digite novamente...")
             switchSensationOption()
@@ -213,7 +213,7 @@ func main(){
             2 - Para você
             """
     )
-    
+        
     let teaOption = readLine()
     switch teaOption {
     case "1":
