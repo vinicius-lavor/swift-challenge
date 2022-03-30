@@ -148,6 +148,8 @@ func main(){
             cureOption = "Indisposiçao"
         case "6":
             cureOption = "Pressaoalta"
+        case "7":
+            cureOption = "Ansiedade"
         default:
             print("\nValor inválido. Digite novamente...")
             switchCureOption()
@@ -210,7 +212,7 @@ func main(){
             Escolha uma das opções abaixo:
             
             1 - Recomendação do dia
-            2 - Para você
+            2 - Chá para ajudar o seu dia
             """
     )
         
