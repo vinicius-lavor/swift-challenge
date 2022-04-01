@@ -59,7 +59,7 @@ func main(){
                                description: "Entre as propriedades do chá, estão os compostos fenólicos e ácidos orgânicos, ácidos fenólicos, flavonoides, polifenóis e óleos essenciais. São eles os responsáveis por conferir os efeitos terapêuticos, em especial, de atividade antioxidante e anti-inflamatória.",
                                instruction: "Ingredientes:\n2 colheres de chá de flores secas de camomila\n250ml de água\n\nModo de preparo:\nAdicionar as flores de camomila na água fervente, tampar e deixar repousar por 10 minutos. A seguir, coar e beber de 3 a 4 xícaras deste chá por dia.",
                                sensation: "Relaxar",
-                               cure: "Ansiedade",
+                               cure: "Enjoo",
                                contraindication: "Não é indicado o uso do chá de camomila durante o processo gestacional, especialmente no primeiro trimestre, podendo ocorrer desde abortos espontâneos e malformações congênitas.")
     let boldoTea = Tea.init(name: "Chá de Boldo",
                             type: "Infusão de Ervas",
@@ -87,7 +87,7 @@ func main(){
                                    description: "Possui muitos nutrientes para o corpo, como a vitamina A, B, C e minerais como cobre, zinco, ferro, potássio, cálcio, magnésio e fósforo. A erva-cidreira possui efeito calmante e sedativo, auxiliando na redução de problemas de insônia, ansiedade e estresse, o que também melhor o humor de acordo com pesquisas.",
                                    instruction: "\nIngredientes:\n4 xícaras de água fervente\n4 colheres de sopa de folhas de erva-cidreira\n\nModo de preparo:\nAdicionar as folhas de erva-cidreira na água fervente, tampar e deixar repousar por alguns minutos. A seguir, coar e beber de 3 a 4 xícaras deste chá por dia.",
                                    sensation: "Relaxar",
-                                   cure: "Indigestao",
+                                   cure: "Ansiedade",
                                    contraindication: "A erva-cidreira é contraindicada para pessoas que estão tomando medicamentos para dormir.")
 
     let teaList = [greenTea, canelaTea, camomilaTea, boldoTea, hortelaTea, hibiscoTea, ervacidreiraTea]
